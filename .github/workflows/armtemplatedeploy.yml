@@ -1,4 +1,4 @@
-name: armTemplateDeployment
+name: armTemplateDeploy
 
 on:
  
@@ -7,7 +7,7 @@ jobs:
   armdeploy:
     runs-on: ubuntu-latest
 
-      steps:
+     steps:
             - uses: actions/checkout@v1
 
             - name: Azure Login
