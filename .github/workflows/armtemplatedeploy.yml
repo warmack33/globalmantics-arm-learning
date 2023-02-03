@@ -1,16 +1,16 @@
-name: armTemplateDeploy
+name: armTemplateDeployment
 
 on:
- 
-  workflow_dispatch:
+   workflow_dispatch:
 jobs:
-  armdeploy:
+
+  armDeploy:
     runs-on: ubuntu-latest
 
-     steps:
-            - uses: actions/checkout@v1
+    steps:
+      - uses: actions/checkout@v2
 
-            - name: Azure Login
-              uses: Azure/Login@v1
-              with:
-                creds:${{secret.AZURE_CRDENTIALS}}
+      - name: Azure Login
+        uses: Azure/Login@v1
+        with:
+          creds:${{secrets.AZURE_CRDENTIALS}}
